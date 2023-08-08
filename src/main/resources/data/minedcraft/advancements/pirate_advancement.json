@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "minecraft:oak_log"
+    },
+    "title": {
+      "translate": "advancements.pirate_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.pirate_advancement.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pirate_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

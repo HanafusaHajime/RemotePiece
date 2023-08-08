@@ -29,6 +29,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.minedcraft.init.MinedcraftModItems;
+import net.mcreator.minedcraft.init.MinedcraftModEntities;
+
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -46,6 +49,9 @@ public class MinedcraftMod {
 	public MinedcraftMod() {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		MinedcraftModItems.REGISTRY.register(bus);
+		MinedcraftModEntities.REGISTRY.register(bus);
 
 	}
 
