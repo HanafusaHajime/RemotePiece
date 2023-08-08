@@ -1,6 +1,37 @@
 {
-  "mod_elements": [],
-  "variable_elements": [],
+  "mod_elements": [
+    {
+      "name": "GetXP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_xp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minedcraft/procedures/GetXPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Leveling"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "Level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {}
@@ -42,6 +73,10 @@
       },
       {
         "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Leveling",
         "children": []
       }
     ]
