@@ -7,7 +7,44 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Fruits",
+        "children": []
+      },
+      {
+        "name": "GUIS",
+        "children": []
+      },
+      {
+        "name": "Overlays",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Armor",
+        "children": []
+      },
+      {
+        "name": "Advancements",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "minedcraft",
