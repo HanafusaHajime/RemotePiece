@@ -12,16 +12,43 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "sourceentity",
             "type": "entity"
           }
         ]
       },
       "path": "~/Leveling"
+    },
+    {
+      "name": "Marine",
+      "type": "livingentity",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minedcraft/entity/MarineEntity.java",
+          "src/main/resources/assets/minedcraft/models/item/marine_spawn_egg.json",
+          "src/main/resources/data/minedcraft/forge/biome_modifier/marine_biome_modifier.json",
+          "src/main/java/net/mcreator/minedcraft/client/renderer/MarineRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "PirateAdvancement",
+      "type": "achievement",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pirate_advancement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minedcraft/advancements/pirate_advancement.json"
+        ]
+      },
+      "path": "~/Advancements"
     }
   ],
   "variable_elements": [
@@ -30,23 +57,26 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "advancements.pirate_advancement.title": "Pirate Advancement",
+      "item.minedcraft.marine_spawn_egg": "Marine Spawn Egg",
+      "advancements.pirate_advancement.descr": "Became a pirate!",
+      "entity.minedcraft.marine": "Marine"
+    }
   },
   "foldersRoot": {
     "name": "~",
     "children": [
-      {
-        "name": "Fruits",
-        "children": []
-      },
-      {
-        "name": "GUIS",
-        "children": []
-      },
       {
         "name": "Overlays",
         "children": []
@@ -60,11 +90,19 @@
         "children": []
       },
       {
+        "name": "GUIS",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
         "name": "Advancements",
         "children": []
       },
       {
-        "name": "Keybinds",
+        "name": "Fruits",
         "children": []
       },
       {
@@ -72,7 +110,7 @@
         "children": []
       },
       {
-        "name": "Particles",
+        "name": "Keybinds",
         "children": []
       },
       {

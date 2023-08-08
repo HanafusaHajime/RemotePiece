@@ -1,1 +1,6 @@
-{}
+{
+  "advancements.pirate_advancement.title": "Pirate Advancement",
+  "item.minedcraft.marine_spawn_egg": "Marine Spawn Egg",
+  "advancements.pirate_advancement.descr": "Became a pirate!",
+  "entity.minedcraft.marine": "Marine"
+}
