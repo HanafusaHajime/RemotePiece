@@ -68,7 +68,6 @@ public class MinedcraftModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.Level = original.Level;
-			clone.level = original.level;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -106,7 +105,6 @@ public class MinedcraftModVariables {
 
 	public static class PlayerVariables {
 		public double Level = 0;
-		public double level = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -116,14 +114,12 @@ public class MinedcraftModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("Level", Level);
-			nbt.putDouble("level", level);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
 			Level = nbt.getDouble("Level");
-			level = nbt.getDouble("level");
 		}
 	}
 
@@ -149,7 +145,6 @@ public class MinedcraftModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.Level = message.data.Level;
-					variables.level = message.data.level;
 				}
 			});
 			context.setPacketHandled(true);

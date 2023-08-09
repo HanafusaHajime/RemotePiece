@@ -3,6 +3,7 @@
     {
       "name": "GetXP",
       "type": "procedure",
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_xp",
@@ -12,8 +13,16 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -49,17 +58,49 @@
         ]
       },
       "path": "~/Advancements"
+    },
+    {
+      "name": "XPAmount",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_amount",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minedcraft/procedures/XPAmountProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Leveling"
+    },
+    {
+      "name": "CheckXP",
+      "type": "command",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_xp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minedcraft/command/CheckXPCommand.java"
+        ]
+      },
+      "path": "~/Leveling"
     }
   ],
   "variable_elements": [
     {
       "name": "Level",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "level",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
