@@ -29,7 +29,7 @@ public class CheckXPCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					XPAmountProcedure.execute(world, entity);
+					XPAmountProcedure.execute(entity);
 					return 0;
 				}));
 	}
